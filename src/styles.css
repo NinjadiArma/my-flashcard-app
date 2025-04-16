@@ -1,0 +1,311 @@
+body, html {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #232946;
+}
+
+.app-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+.premium-header {
+  width: 100%;
+  padding: 2rem 0 1rem 0;
+  background: transparent;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #6246ea;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 24px #6246ea22;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-section {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 48px #6246ea22;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 420px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #232946;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-desc {
+  font-size: 1.1rem;
+  color: #4f4f6e;
+  margin-bottom: 1.5rem;
+}
+
+.instructions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+
+.instructions-list li {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.step-number {
+  /* Simple, identical step numbers */
+  .simple-step-number {
+    display: inline-block;
+    background: #6246ea;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 1.7em;
+    height: 1.7em;
+    text-align: center;
+    line-height: 1.7em;
+    font-size: 1.1em;
+    margin-right: 0.5em;
+    margin-top: 0.1em;
+    box-shadow: 0 2px 8px #6246ea22;
+  }
+  
+  /* Secondary button style for Back to Home */
+  .secondary-btn {
+    background: #fff;
+    color: #6246ea;
+    border: 2px solid #6246ea;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    transition: background 0.2s, color 0.2s, border 0.2s, transform 0.15s;
+  }
+  
+  .secondary-btn:hover, .secondary-btn:focus {
+    background: #6246ea;
+    color: #fff;
+    border: 2px solid #6246ea;
+    transform: translateY(-2px) scale(1.04);
+  }
+  box-shadow: 0 2px 8px #6246ea22;
+}
+
+.example-box {
+  background: #f3f0ff;
+  border: 1px dashed #6246ea;
+  border-radius: 10px;
+  padding: 0.7em 1em;
+  margin-top: 0.5em;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 0.98em;
+  color: #232946;
+  white-space: pre-line;
+}
+
+.upload-area {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-label {
+  display: inline-block;
+  background: linear-gradient(90deg, #6246ea 0%, #a594f9 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 16px #6246ea22;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 0.5rem;
+}
+
+.upload-label:hover, .upload-label:focus {
+  background: linear-gradient(90deg, #a594f9 0%, #6246ea 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.flashcard-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.premium-flashcard {
+  width: 99vw;
+  max-width: 700px;
+  min-height: 340px;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 8px 48px #6246ea22;
+  margin-bottom: 2.2rem;
+  position: relative;
+  perspective: 1200px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.premium-flashcard-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  transform-style: preserve-3d;
+  position: relative;
+  display: flex;
+}
+
+.premium-flashcard-front,
+.premium-flashcard-back {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+  background: #fff;
+  color: #232946;
+  border-radius: 32px;
+  box-shadow: 0 8px 48px #6246ea22;
+}
+
+.premium-flashcard-back {
+  background: #f3f0ff;
+  color: #16a34a;
+  font-weight: 600;
+}
+.card-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #6246ea;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  align-self: center; /* Center label */
+}
+
+.premium-flashcard-back .card-label {
+  color: #16a34a;
+}
+
+.card-content {
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: #232946;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Center text */
+  word-break: break-word;
+  width: 100%;
+  max-width: 100%;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-index {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #a594f9;
+  font-weight: 600;
+  text-align: center;
+  align-self: center;
+}
+
+.actions-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.premium-btn {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(90deg, #6246ea 0%, #a594f9 100%);
+  color: #fff;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 16px #6246ea22;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.premium-btn:hover, .premium-btn:focus {
+  background: linear-gradient(90deg, #a594f9 0%, #6246ea 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.premium-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.premium-footer {
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem 0 0.7rem 0;
+  font-size: 1rem;
+  color: #a594f9;
+  background: transparent;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .welcome-section, .premium-flashcard {
+    max-width: 98vw;
+    width: 98vw;
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+  .main-content {
+    padding: 0 0.2rem;
+  }
+  .premium-flashcard-front, .premium-flashcard-back {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    font-size: 1.05rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+}
